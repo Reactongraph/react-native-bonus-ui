@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 
-import coinImage from "../../assets/coin.png";
+import Coin from "../../assets/coin.svg";
 import { adBonusAmount } from "./data";
 import { LinearGradient } from "expo-linear-gradient";
 import { style } from "./Style";
@@ -21,14 +21,13 @@ export const AdView = () => {
       {adBonusAmount?.map((item, ind) => {
         return (
           <View key={`${item}_${ind}`} style={style.listContainer}>
-            <View style={{ flex: 1 }}>
-              <Image source={coinImage} style={{ width: 28, height: 28 }} />
-            </View>
-            <View style={{ flex: 4 }}>
+            <View
+              style={{ flexDirection: "row", gap: 16, alignItems: "center" }}
+            >
+              <Coin width={28} height={28} />
               <Text style={style.adamountLabel}>+ {item} Bonus</Text>
             </View>
             <TouchableOpacity
-              style={{ flex: 1.5 }}
               onPress={() => {
                 const data = listChecking(getTaskList, ind);
                 setGetTaskList(data);
@@ -38,7 +37,7 @@ export const AdView = () => {
                 colors={[Colors.blueGradient, Colors.pinkGradient]}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 0 }}
-                style={[style.buttonStyle, { width: 62 }]}
+                style={[style.buttonStyle, { width: 62, height: 20 }]}
               >
                 <Text style={style.getBonusText}>
                   {isIncluded(ind) ? "Claim" : "Watch"}

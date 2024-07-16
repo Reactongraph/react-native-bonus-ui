@@ -4,7 +4,7 @@ import { LinearGradient } from "expo-linear-gradient";
 
 import { listChecking } from "../../Utils/helper";
 import { Colors } from "../../Utils/constant";
-import coinImage from "../../assets/coin.png";
+import Coin from "../../assets/coin.svg";
 import { TaskList } from "./data";
 import { style } from "./Style";
 
@@ -17,20 +17,22 @@ export const TaskView = () => {
     [getTaskList]
   );
   return (
-    <View style={{ marginTop: 15 }}>
+    <View style={{ marginTop: 10 }}>
       {TaskList?.map((item, ind) => {
         const { label, bonusAmount } = item || "";
         return (
           <View key={label} style={style.listContainer}>
-            <View style={{ flex: 1 }}>
-              <Image source={coinImage} style={{ width: 28, height: 28 }} />
+            <View
+              style={{ flexDirection: "row", gap: 16, alignItems: "center" }}
+            >
+              <Coin width={28} height={28} />
+              <View>
+                <Text style={style.taskLabel}>{label}</Text>
+                <Text style={style.amountLabel}>+ {bonusAmount} Bonus</Text>
+              </View>
             </View>
-            <View style={{ flex: 4 }}>
-              <Text style={style.taskLabel}>{label}</Text>
-              <Text style={style.amountLabel}>+ {bonusAmount} Bonus</Text>
-            </View>
+
             <TouchableOpacity
-              style={{ flex: 1.5 }}
               onPress={() => {
                 const data = listChecking(getTaskList, ind);
                 setGetTaskList(data);
@@ -40,10 +42,7 @@ export const TaskView = () => {
                 colors={[Colors.blueGradient, Colors.pinkGradient]}
                 start={{ x: 0, y: 0 }}
                 end={{ x: 1, y: 0 }}
-                style={[
-                  style.buttonStyle,
-                  { width: isIncluded(ind) ? 55 : 50 },
-                ]}
+                style={[style.buttonStyle, { width: 50, height: 20 }]}
               >
                 <Text style={style.getBonusText}>
                   {isIncluded(ind) ? "Claim" : "Get"}

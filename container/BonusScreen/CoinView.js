@@ -1,6 +1,6 @@
 import { View, Text, Image } from "react-native";
 
-import coinImage from "../../assets/coin.png";
+import Coin from "../../assets/coin.svg";
 import { dailyCoinEarn } from "./data";
 import { style } from "./Style";
 
@@ -12,7 +12,8 @@ export const CoinView = () => {
           <View key={`${item}_${ind}`}>
             <View style={style.coinBox}>
               <Text style={style.coinText}>+{item}</Text>
-              <Image source={coinImage} style={{ width: 18, height: 18 }} />
+
+              <Coin width={18} height={18} style={{ marginBottom: 3 }} />
             </View>
             <Text style={style.dayText}>Day {ind + 1}</Text>
           </View>

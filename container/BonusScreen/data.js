@@ -1,4 +1,4 @@
-export const dailyCoinEarn = [20, 20, 25, 25, 20, 30, 30, 30];
+export const dailyCoinEarn = [20, 20, 25, 25, 20, 30, 30];
 export const TaskList = [
   {
     label: "Get reward notifications",
