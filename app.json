@@ -4,19 +4,20 @@
     "slug": "bonus",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/coin.png",
+    "icon": "./assets/splashCoin.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/coin.png",
+      "image": "./assets/splashCoin.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.psongraph.bonus"
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/coin.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.psongraph.bonus"

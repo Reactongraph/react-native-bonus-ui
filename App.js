@@ -16,10 +16,10 @@ export default function App() {
   return (
     // <SafeAreaProvider>
     // <SafeAreaView style={styles.container}>
-    <>
+    <View style={styles.container}>
       <StatusBar translucent />
       <BonusScreen />
-    </>
+    </View>
     // </SafeAreaView>
     // </SafeAreaProvider>
   );
