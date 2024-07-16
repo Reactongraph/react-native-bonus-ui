@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "bonus",
+    "slug": "bonus",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/coin.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/coin.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.psongraph.bonus"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/font/Poppins-Light.ttf",
+            "./assets/font/Poppins-Medium.ttf",
+            "./assets/font/Poppins-Regular.ttf"
+          ]
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "88c9f9e2-e642-4734-b740-34846de2eeca"
+      }
+    },
+    "owner": "psongraph"
+  }
+}
